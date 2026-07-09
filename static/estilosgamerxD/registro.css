@@ -1,0 +1,147 @@
+/*Universidad Politécnica de Victoria, Ciudad Victoria. Tamaulipas (18 de Abril de 2025)
+Ingeniería en Tecnologías de la información
+Proyecto final de la materia de "Base de datos", cursada con el maestro: ING. LUIS ANTONIO GONZALEZ CASTRO 
+Integrantes del proyecto: Joshua André Alvarado Tovar, Ingridh Maricela Gracia Flores, Juan Antonio Manzano Ceja, Angel Guadalupe Rivera Portillo.
+El presente código forma parte de nuestro proyecto final, donde encontrará la estructura necesitada para el correcto funcionamiento de nuestro proyecto:*/
+/* Estilos específicos para la página de registro */
+
+.registro-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1a1a2e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .registro-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .registro-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .registro-form .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .registro-form .form-row .form-group {
+    flex: 1;
+  }
+  
+  .registro-form label {
+    display: block;
+    color: #e94560;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .registro-form input[type="text"],
+  .registro-form input[type="email"],
+  .registro-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #16213e;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .registro-form input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .registro-form input:focus {
+    border-color: #e94560;
+    outline: none;
+  }
+  
+  .registro-form small {
+    display: block;
+    margin-top: 5px;
+    color: #aaa;
+    font-size: 0.8rem;
+  }
+  
+  .password-strength {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .strength-bar {
+    height: 4px;
+    width: 25%;
+    background: #555;
+    border-radius: 2px;
+  }
+  
+  .strength-text {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-left: 10px;
+  }
+  
+  .terms {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+  }
+  
+  .terms a {
+    color: #e94560;
+  }
+  
+  .registro-btn {
+    background: #e94560;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  
+  .registro-btn:hover {
+    background: #ff6b81;
+    transform: translateY(-2px);
+  }
+  
+  .registro-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #fff;
+  }
+  
+  .registro-links a {
+    color: #e94560;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .registro-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 650px) {
+    .registro-container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .registro-form .form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }

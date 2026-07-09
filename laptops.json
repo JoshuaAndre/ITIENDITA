@@ -1,0 +1,917 @@
+[
+  {
+    "nombre": "Lenovo IdeaPad Slim 3 15",
+    "marca": "Lenovo",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 8999,
+    "precio_actual": 8099.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 71,
+    "stock": 15,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Lenovo%20IdeaPad%20Slim%203%2015",
+    "descripcion": "Ryzen 5 7530U · 8GB RAM · Integrada · 15.6\" FHD · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela"
+      ],
+      "gama": "baja",
+      "cpu": "Ryzen 5 7530U",
+      "gpu": "Integrada",
+      "ram_gb": 8,
+      "pantalla": "15.6\" FHD",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "HP 15",
+    "marca": "HP",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 9499,
+    "precio_actual": 8549.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 57,
+    "stock": 11,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=HP%2015",
+    "descripcion": "Core i3-1315U · 8GB RAM · Integrada · 15.6\" FHD · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela"
+      ],
+      "gama": "baja",
+      "cpu": "Core i3-1315U",
+      "gpu": "Integrada",
+      "ram_gb": 8,
+      "pantalla": "15.6\" FHD",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Acer Aspire 3",
+    "marca": "Acer",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 8499,
+    "precio_actual": 7649.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 24,
+    "stock": 5,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Acer%20Aspire%203",
+    "descripcion": "Ryzen 3 7320U · 8GB RAM · Integrada · 15.6\" FHD · 256GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela"
+      ],
+      "gama": "baja",
+      "cpu": "Ryzen 3 7320U",
+      "gpu": "Integrada",
+      "ram_gb": 8,
+      "pantalla": "15.6\" FHD",
+      "almacenamiento": "256GB SSD"
+    }
+  },
+  {
+    "nombre": "Dell Inspiron 15 3000",
+    "marca": "Dell",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 9999,
+    "precio_actual": 8999.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 60,
+    "stock": 13,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Dell%20Inspiron%2015%203000",
+    "descripcion": "Core i5-1235U · 8GB RAM · Integrada · 15.6\" FHD · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela"
+      ],
+      "gama": "baja",
+      "cpu": "Core i5-1235U",
+      "gpu": "Integrada",
+      "ram_gb": 8,
+      "pantalla": "15.6\" FHD",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "ASUS Vivobook 15",
+    "marca": "ASUS",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 10999,
+    "precio_actual": 9899.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 23,
+    "stock": 4,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=ASUS%20Vivobook%2015",
+    "descripcion": "Core i5-1335U · 16GB RAM · Integrada · 15.6\" FHD · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela"
+      ],
+      "gama": "media",
+      "cpu": "Core i5-1335U",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Acer Aspire 5",
+    "marca": "Acer",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 11999,
+    "precio_actual": 10799.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 38,
+    "stock": 5,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Acer%20Aspire%205",
+    "descripcion": "Ryzen 5 7535U · 16GB RAM · Integrada · 15.6\" FHD · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela",
+        "programacion"
+      ],
+      "gama": "media",
+      "cpu": "Ryzen 5 7535U",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Lenovo IdeaPad Slim 5",
+    "marca": "Lenovo",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 13499,
+    "precio_actual": 12824.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 68,
+    "stock": 15,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Lenovo%20IdeaPad%20Slim%205",
+    "descripcion": "Ryzen 7 7730U · 16GB RAM · Integrada · 16\" WUXGA · 1TB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela",
+        "programacion"
+      ],
+      "gama": "media",
+      "cpu": "Ryzen 7 7730U",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "16\" WUXGA",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "HP Pavilion Plus 14",
+    "marca": "HP",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 14999,
+    "precio_actual": 13499.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 81,
+    "stock": 3,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=HP%20Pavilion%20Plus%2014",
+    "descripcion": "Core i7-1355U · 16GB RAM · Integrada · 14\" 2.8K OLED · 1TB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "programacion"
+      ],
+      "gama": "media",
+      "cpu": "Core i7-1355U",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "14\" 2.8K OLED",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Samsung Galaxy Book4",
+    "marca": "Samsung",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 13999,
+    "precio_actual": 12599.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 50,
+    "stock": 10,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Samsung%20Galaxy%20Book4",
+    "descripcion": "Core i5-120U · 16GB RAM · Integrada · 15.6\" FHD · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela"
+      ],
+      "gama": "media",
+      "cpu": "Core i5-120U",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Apple MacBook Air 13 M3",
+    "marca": "Apple",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 22999,
+    "precio_actual": 20699.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 78,
+    "stock": 13,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Apple%20MacBook%20Air%2013%20M3",
+    "descripcion": "Apple M3 · 16GB RAM · Integrada 10-core · 13.6\" Retina · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela",
+        "edicion",
+        "programacion"
+      ],
+      "gama": "alta",
+      "cpu": "Apple M3",
+      "gpu": "Integrada 10-core",
+      "ram_gb": 16,
+      "pantalla": "13.6\" Retina",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Apple MacBook Air 15 M3",
+    "marca": "Apple",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 26999,
+    "precio_actual": 25649.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 79,
+    "stock": 3,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Apple%20MacBook%20Air%2015%20M3",
+    "descripcion": "Apple M3 · 16GB RAM · Integrada 10-core · 15.3\" Retina · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "edicion",
+        "programacion"
+      ],
+      "gama": "alta",
+      "cpu": "Apple M3",
+      "gpu": "Integrada 10-core",
+      "ram_gb": 16,
+      "pantalla": "15.3\" Retina",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Lenovo ThinkPad E14 Gen 6",
+    "marca": "Lenovo",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 16999,
+    "precio_actual": 15299.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 8,
+    "stock": 3,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Lenovo%20ThinkPad%20E14%20Gen%206",
+    "descripcion": "Ryzen 7 7735U · 16GB RAM · Integrada · 14\" WUXGA · 1TB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "programacion"
+      ],
+      "gama": "media",
+      "cpu": "Ryzen 7 7735U",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "14\" WUXGA",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Dell Inspiron 14 Plus",
+    "marca": "Dell",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 18999,
+    "precio_actual": 18049.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 24,
+    "stock": 6,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Dell%20Inspiron%2014%20Plus",
+    "descripcion": "Core i7-13700H · 16GB RAM · Integrada · 14\" 2.2K · 1TB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "programacion",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Core i7-13700H",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "14\" 2.2K",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "HP EliteBook 840 G11",
+    "marca": "HP",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 24999,
+    "precio_actual": 22499.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 3,
+    "stock": 15,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=HP%20EliteBook%20840%20G11",
+    "descripcion": "Core Ultra 7 155U · 16GB RAM · Integrada · 14\" WUXGA · 1TB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "programacion"
+      ],
+      "gama": "alta",
+      "cpu": "Core Ultra 7 155U",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "14\" WUXGA",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Lenovo ThinkPad X1 Carbon",
+    "marca": "Lenovo",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 32999,
+    "precio_actual": 29699.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 41,
+    "stock": 10,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Lenovo%20ThinkPad%20X1%20Carbon",
+    "descripcion": "Core Ultra 7 165U · 32GB RAM · Integrada · 14\" 2.8K OLED · 1TB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "programacion"
+      ],
+      "gama": "alta",
+      "cpu": "Core Ultra 7 165U",
+      "gpu": "Integrada",
+      "ram_gb": 32,
+      "pantalla": "14\" 2.8K OLED",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Apple MacBook Pro 14 M4",
+    "marca": "Apple",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 29999,
+    "precio_actual": 26999.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 25,
+    "stock": 11,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Apple%20MacBook%20Pro%2014%20M4",
+    "descripcion": "Apple M4 · 16GB RAM · Integrada 10-core · 14.2\" Liquid Retina XDR · 512GB SSD",
+    "specs": {
+      "usos": [
+        "edicion",
+        "programacion",
+        "oficina"
+      ],
+      "gama": "alta",
+      "cpu": "Apple M4",
+      "gpu": "Integrada 10-core",
+      "ram_gb": 16,
+      "pantalla": "14.2\" Liquid Retina XDR",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Apple MacBook Pro 14 M4 Pro",
+    "marca": "Apple",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 38999,
+    "precio_actual": 37049.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 81,
+    "stock": 7,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Apple%20MacBook%20Pro%2014%20M4%20Pro",
+    "descripcion": "Apple M4 Pro · 24GB RAM · Integrada 16-core · 14.2\" Liquid Retina XDR · 1TB SSD",
+    "specs": {
+      "usos": [
+        "edicion",
+        "programacion"
+      ],
+      "gama": "alta",
+      "cpu": "Apple M4 Pro",
+      "gpu": "Integrada 16-core",
+      "ram_gb": 24,
+      "pantalla": "14.2\" Liquid Retina XDR",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Apple MacBook Pro 16 M4 Max",
+    "marca": "Apple",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 64999,
+    "precio_actual": 58499.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 0,
+    "stock": 13,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Apple%20MacBook%20Pro%2016%20M4%20Max",
+    "descripcion": "Apple M4 Max · 36GB RAM · Integrada 40-core · 16.2\" Liquid Retina XDR · 1TB SSD",
+    "specs": {
+      "usos": [
+        "edicion",
+        "programacion"
+      ],
+      "gama": "alta",
+      "cpu": "Apple M4 Max",
+      "gpu": "Integrada 40-core",
+      "ram_gb": 36,
+      "pantalla": "16.2\" Liquid Retina XDR",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Acer Nitro V 15",
+    "marca": "Acer",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 17999,
+    "precio_actual": 17099.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 58,
+    "stock": 13,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Acer%20Nitro%20V%2015",
+    "descripcion": "Ryzen 5 7535HS · 16GB RAM · RTX 5050 Laptop · 15.6\" FHD 144Hz · 512GB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "escuela"
+      ],
+      "gama": "media",
+      "cpu": "Ryzen 5 7535HS",
+      "gpu": "RTX 5050 Laptop",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD 144Hz",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "HP Victus 15",
+    "marca": "HP",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 18499,
+    "precio_actual": 16649.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 52,
+    "stock": 11,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=HP%20Victus%2015",
+    "descripcion": "Core i5-13420H · 16GB RAM · RTX 5050 Laptop · 15.6\" FHD 144Hz · 512GB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "escuela"
+      ],
+      "gama": "media",
+      "cpu": "Core i5-13420H",
+      "gpu": "RTX 5050 Laptop",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD 144Hz",
+      "almacenamiento": "512GB SSD"
+    }
+  },
+  {
+    "nombre": "Lenovo LOQ 15",
+    "marca": "Lenovo",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 21999,
+    "precio_actual": 20899.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 90,
+    "stock": 7,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Lenovo%20LOQ%2015",
+    "descripcion": "Core i7-13650HX · 16GB RAM · RTX 5060 Laptop · 15.6\" FHD 144Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "media",
+      "cpu": "Core i7-13650HX",
+      "gpu": "RTX 5060 Laptop",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD 144Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "ASUS TUF Gaming A15",
+    "marca": "ASUS",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 22999,
+    "precio_actual": 20699.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 29,
+    "stock": 11,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=ASUS%20TUF%20Gaming%20A15",
+    "descripcion": "Ryzen 7 8845HS · 16GB RAM · RTX 5060 Laptop · 15.6\" FHD 144Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming"
+      ],
+      "gama": "media",
+      "cpu": "Ryzen 7 8845HS",
+      "gpu": "RTX 5060 Laptop",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD 144Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Acer Predator Helios Neo 16",
+    "marca": "Acer",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 27999,
+    "precio_actual": 25199.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 3,
+    "stock": 4,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Acer%20Predator%20Helios%20Neo%2016",
+    "descripcion": "Core i7-14700HX · 16GB RAM · RTX 5060 Laptop · 16\" WQXGA 165Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Core i7-14700HX",
+      "gpu": "RTX 5060 Laptop",
+      "ram_gb": 16,
+      "pantalla": "16\" WQXGA 165Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "MSI Katana 15",
+    "marca": "MSI",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 23999,
+    "precio_actual": 21599.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 13,
+    "stock": 9,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=MSI%20Katana%2015",
+    "descripcion": "Core i7-13620H · 16GB RAM · RTX 5060 Laptop · 15.6\" FHD 144Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming"
+      ],
+      "gama": "media",
+      "cpu": "Core i7-13620H",
+      "gpu": "RTX 5060 Laptop",
+      "ram_gb": 16,
+      "pantalla": "15.6\" FHD 144Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "ASUS ROG Strix G16",
+    "marca": "ASUS",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 34999,
+    "precio_actual": 33249.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 37,
+    "stock": 9,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=ASUS%20ROG%20Strix%20G16",
+    "descripcion": "Core i9-14900HX · 32GB RAM · RTX 5070 Laptop · 16\" QHD+ 240Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Core i9-14900HX",
+      "gpu": "RTX 5070 Laptop",
+      "ram_gb": 32,
+      "pantalla": "16\" QHD+ 240Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Lenovo Legion Pro 5",
+    "marca": "Lenovo",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 36999,
+    "precio_actual": 35149.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 2,
+    "stock": 13,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Lenovo%20Legion%20Pro%205",
+    "descripcion": "Ryzen 9 8945HX · 32GB RAM · RTX 5070 Laptop · 16\" WQXGA 240Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Ryzen 9 8945HX",
+      "gpu": "RTX 5070 Laptop",
+      "ram_gb": 32,
+      "pantalla": "16\" WQXGA 240Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "MSI Creator 16",
+    "marca": "MSI",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 44999,
+    "precio_actual": 42749.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 27,
+    "stock": 6,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=MSI%20Creator%2016",
+    "descripcion": "Core i7-14700HX · 32GB RAM · RTX 5070 Laptop · 16\" 4K OLED · 2TB SSD",
+    "specs": {
+      "usos": [
+        "edicion",
+        "gaming"
+      ],
+      "gama": "alta",
+      "cpu": "Core i7-14700HX",
+      "gpu": "RTX 5070 Laptop",
+      "ram_gb": 32,
+      "pantalla": "16\" 4K OLED",
+      "almacenamiento": "2TB SSD"
+    }
+  },
+  {
+    "nombre": "ASUS ROG Zephyrus G16",
+    "marca": "ASUS",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 47999,
+    "precio_actual": 45599.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 60,
+    "stock": 9,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=ASUS%20ROG%20Zephyrus%20G16",
+    "descripcion": "Core Ultra 9 285H · 32GB RAM · RTX 5080 Laptop · 16\" OLED 240Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Core Ultra 9 285H",
+      "gpu": "RTX 5080 Laptop",
+      "ram_gb": 32,
+      "pantalla": "16\" OLED 240Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Razer Blade 16",
+    "marca": "Razer",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 59999,
+    "precio_actual": 53999.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 50,
+    "stock": 9,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Razer%20Blade%2016",
+    "descripcion": "Core i9-14900HX · 32GB RAM · RTX 5080 Laptop · 16\" QHD+ 240Hz · 2TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Core i9-14900HX",
+      "gpu": "RTX 5080 Laptop",
+      "ram_gb": 32,
+      "pantalla": "16\" QHD+ 240Hz",
+      "almacenamiento": "2TB SSD"
+    }
+  },
+  {
+    "nombre": "Alienware m18 R2",
+    "marca": "Dell",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 64999,
+    "precio_actual": 61749.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 72,
+    "stock": 13,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Alienware%20m18%20R2",
+    "descripcion": "Core i9-14900HX · 32GB RAM · RTX 5090 Laptop · 18\" QHD+ 165Hz · 2TB SSD",
+    "specs": {
+      "usos": [
+        "gaming"
+      ],
+      "gama": "alta",
+      "cpu": "Core i9-14900HX",
+      "gpu": "RTX 5090 Laptop",
+      "ram_gb": 32,
+      "pantalla": "18\" QHD+ 165Hz",
+      "almacenamiento": "2TB SSD"
+    }
+  },
+  {
+    "nombre": "MSI Titan 18 HX",
+    "marca": "MSI",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 89999,
+    "precio_actual": 85499.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 86,
+    "stock": 7,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=MSI%20Titan%2018%20HX",
+    "descripcion": "Core i9-14900HX · 64GB RAM · RTX 5090 Laptop · 18\" 4K 120Hz · 4TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Core i9-14900HX",
+      "gpu": "RTX 5090 Laptop",
+      "ram_gb": 64,
+      "pantalla": "18\" 4K 120Hz",
+      "almacenamiento": "4TB SSD"
+    }
+  },
+  {
+    "nombre": "Gigabyte Aorus 15",
+    "marca": "Gigabyte",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 25999,
+    "precio_actual": 23399.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 11,
+    "stock": 7,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Gigabyte%20Aorus%2015",
+    "descripcion": "Core i7-13620H · 16GB RAM · RTX 5060 Laptop · 15.6\" QHD 165Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming"
+      ],
+      "gama": "media",
+      "cpu": "Core i7-13620H",
+      "gpu": "RTX 5060 Laptop",
+      "ram_gb": 16,
+      "pantalla": "15.6\" QHD 165Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "HP Omen 16",
+    "marca": "HP",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 29999,
+    "precio_actual": 26999.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 1,
+    "stock": 9,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=HP%20Omen%2016",
+    "descripcion": "Ryzen 7 8845HS · 16GB RAM · RTX 5070 Laptop · 16.1\" QHD 240Hz · 1TB SSD",
+    "specs": {
+      "usos": [
+        "gaming",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Ryzen 7 8845HS",
+      "gpu": "RTX 5070 Laptop",
+      "ram_gb": 16,
+      "pantalla": "16.1\" QHD 240Hz",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "ASUS Zenbook 14 OLED",
+    "marca": "ASUS",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 19999,
+    "precio_actual": 18999.05,
+    "descuento": 5,
+    "estrellas": 5,
+    "opiniones": 17,
+    "stock": 6,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=ASUS%20Zenbook%2014%20OLED",
+    "descripcion": "Core Ultra 7 155H · 16GB RAM · Integrada · 14\" 3K OLED · 1TB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "programacion",
+        "edicion"
+      ],
+      "gama": "alta",
+      "cpu": "Core Ultra 7 155H",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "14\" 3K OLED",
+      "almacenamiento": "1TB SSD"
+    }
+  },
+  {
+    "nombre": "Microsoft Surface Laptop 7",
+    "marca": "Microsoft",
+    "categoria": "Laptops",
+    "tipo": "laptop",
+    "precio_original": 27999,
+    "precio_actual": 25199.1,
+    "descuento": 10,
+    "estrellas": 5,
+    "opiniones": 12,
+    "stock": 3,
+    "imagen": "https://placehold.co/400x300/3730a3/ffffff?text=Microsoft%20Surface%20Laptop%207",
+    "descripcion": "Snapdragon X Elite · 16GB RAM · Integrada · 13.8\" PixelSense · 512GB SSD",
+    "specs": {
+      "usos": [
+        "oficina",
+        "escuela",
+        "programacion"
+      ],
+      "gama": "alta",
+      "cpu": "Snapdragon X Elite",
+      "gpu": "Integrada",
+      "ram_gb": 16,
+      "pantalla": "13.8\" PixelSense",
+      "almacenamiento": "512GB SSD"
+    }
+  }
+]

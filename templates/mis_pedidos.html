@@ -1,0 +1,178 @@
+<!-- Universidad Politécnica de Victoria, Ciudad Victoria. Tamaulipas (18 de Abril de 2025)
+Ingeniería en Tecnologías de la información
+Proyecto final de la materia de "Base de datos", cursada con el maestro: ING. LUIS ANTONIO GONZALEZ CASTRO 
+Integrantes del proyecto: Joshua André Alvarado Tovar, Ingridh Maricela Gracia Flores, Juan Antonio Manzano Ceja, Angel Guadalupe Rivera Portillo.
+El presente código forma parte de nuestro proyecto final, donde encontrará la estructura necesitada para el correcto funcionamiento de nuestro proyecto: -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Pedidos Gamer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilosgamerxD/estilostemplate.css') }}">
+  <link rel="icon" href="{{url_for('static', filename= 'imagenesgamerxD/Logo-navegador.png')}}" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+          <div class="logo">
+            <a href="{{ url_for('inicio') }}"><img src="{{ url_for('static', filename='imagenesgamerxD/Logo.png') }}" alt="Logo de la tienda"></a>
+          </div>
+          <nav class="navegacion-principal">
+            <form class="barra-busqueda" role="search" action="{{ url_for('buscar') }}" method="GET">
+              <input type="search" name="q" placeholder="Buscar productos..." aria-label="Buscar productos" value="{{ termino or '' }}">
+              <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </form>
+            <ul class="menu-usuario">
+          <li><a href="{{ url_for('recomendador.recomendador') }}"><i class="fas fa-microchip"></i> Armar PC</a></li>
+          <li><a href="{{ url_for('chatbot.chatbot') }}"><i class="fas fa-robot"></i> Asistente</a></li>
+              {% if session.usuario_logeado %}
+                {% if session.rango == 'Admin' %}
+                  <li><a href="{{ url_for('mi_cuenta') }}"><i class="fas fa-user"></i> Mi cuenta</a></li>
+                  <li><a href="{{ url_for('gestionar_roles') }}"><i class="fas fa-users-cog"></i> Editar roles</a></li>
+                  <li><a href="{{ url_for('crear_producto') }}"><i class="fas fa-plus"></i> Añadir producto</a></li>
+                  <li><a href="{{ url_for('modificar_stock') }}"><i class="fas fa-edit"></i> Editar stock</a></li>
+                {% elif session.rango == 'Repartidor' %}
+                  <li><a href="{{ url_for('mi_cuenta') }}"><i class="fas fa-user"></i> Mi cuenta</a></li>
+                  <li><a href="{{ url_for('confirmar_pedidos') }}"><i class="fas fa-truck"></i> Confirmar pedido</a></li>
+                {% else %}
+                  <li><a href="{{ url_for('mi_cuenta') }}"><i class="fas fa-user"></i> Mi cuenta</a></li>
+                  <li><a href="{{ url_for('mis_pedidos') }}"><i class="fas fa-box-open"></i> Mis pedidos</a></li>
+                  <li>
+                    <a href="{{ url_for('mi_carrito') }}" id="carrito-link" aria-label="Carrito de compras">
+                      <i class="fas fa-shopping-cart"></i>
+                      Carrito (<span id="contador-carrito">{{ cart_count }}</span>)
+                    </a>
+                  </li>
+                {% endif %}
+                <li>
+                  <a href="{{ url_for('logout') }}" aria-label="Cerrar sesión">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                  </a>
+                </li>
+              {% else %}
+                <li><a href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</a></li>
+                <li><a href="{{ url_for('registro') }}" class="active"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+      </header>
+    
+  <nav class="migas-pan" aria-label="Ruta de navegación">
+    <ol>
+      <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+      <li>Mis Pedidos</li>
+    </ol>
+  </nav>
+
+  <main class="contenedor-carrito">
+    <h1>Mis Pedidos</h1>
+    {% if pedidos %}
+        <div class="lista-pedidos">
+            {% for pedido in pedidos %}
+                <div class="pedido-card">
+                    <div class="pedido-header">
+                        <div class="pedido-info">
+                            <h3><i class="fas fa-box-open"></i> Pedido #{{ loop.index }}</h3>
+                            <span class="fecha-pedido">{{ pedido.fecha_creacion.strftime('%d/%m/%Y %H:%M') }}</span>
+                        </div>
+                        <div class="estado-pedido {{ 'entregado' if pedido.estado == 'entregado' else 'en-proceso' }}">
+                            {{ pedido.estado|capitalize }}
+                        </div>
+                    </div>
+                    
+                    <div class="pedido-body">
+                        <div class="pedido-seccion">
+                            <h4><i class="fas fa-truck"></i> Información de entrega</h4>
+                            <p><strong>Receptor:</strong> {{ pedido.recibidor }}</p>
+                            <p><strong>Dirección:</strong> {{ pedido.direccion }}</p>
+                            <p><strong>Características:</strong> {{ pedido.caracteristicas_lugar_entrega }}</p>
+                        </div>
+                        
+                        <div class="pedido-seccion">
+                            <h4><i class="fas fa-credit-card"></i> Información de pago</h4>
+                            <p><strong>Método:</strong> {{ pedido.metodo_pago }}</p>
+                            <p><strong>Total:</strong> ${{ "%.2f"|format(pedido.total) }}</p>
+                        </div>
+                        
+                        <div class="pedido-seccion">
+                            <h4><i class="fas fa-shopping-bag"></i> Productos</h4>
+                            <ul class="lista-productos-pedido">
+                                {% for item in pedido.productos %}
+                                    <li class="producto-pedido">
+                                        <span class="producto-nombre">{{ item.nombre }}</span>
+                                        <span class="producto-cantidad">x{{ item.cantidad }}</span>
+                                        <span class="producto-precio">${{ "%.2f"|format(item.precio * item.cantidad) }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pedido-acciones">
+                        <a class="boton-secundario" href="{{ url_for('generar_factura', pedido_id=pedido._id|string) }}" target="_blank">
+                            <i class="fas fa-print"></i> Imprimir factura
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="sin-pedidos">
+            <i class="fas fa-box-open fa-3x"></i>
+            <h3>No tienes pedidos realizados aún</h3>
+            <p>Cuando hagas un pedido, aparecerá aquí para que puedas hacerle seguimiento.</p>
+            <a href="{{ url_for('inicio') }}" class="boton-primario">
+                <i class="fas fa-shopping-bag"></i> Ir a la tienda
+            </a>
+        </div>
+    {% endif %}
+</main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor-pie">
+      <div class="seccion-pie">
+        <h3>Servicio al cliente</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-phone-alt"></i> Contacto</a></li>
+          <li><a href="#"><i class="fas fa-question-circle"></i> Preguntas frecuentes</a></li>
+          <li><a href="#"><i class="fas fa-exchange-alt"></i> Devoluciones</a></li>
+        </ul>
+      </div>
+      
+      <div class="seccion-pie">
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-building"></i> Sobre nosotros</a></li>
+          <li><a href="#"><i class="fas fa-file-alt"></i> Términos y condiciones</a></li>
+          <li><a href="#"><i class="fas fa-lock"></i> Privacidad</a></li>
+        </ul>
+      </div>
+      
+      <div class="seccion-pie">
+        <h3>Redes sociales</h3>
+        <div class="redes-sociales">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <h3>Métodos de pago</h3>
+        <div class="metodos-pago">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fab fa-cc-amex" title="American Express"></i>
+          <i class="fas fa-money-bill-wave" title="Efectivo"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="derechos">
+      <p>&copy; 2025 Los perry's. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

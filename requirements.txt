@@ -1,0 +1,5 @@
+Flask
+pymongo[srv]
+reportlab
+gunicorn
+Werkzeug

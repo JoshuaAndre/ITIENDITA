@@ -1,0 +1,112 @@
+/*Universidad Politécnica de Victoria, Ciudad Victoria. Tamaulipas (18 de Abril de 2025)
+Ingeniería en Tecnologías de la información
+Proyecto final de la materia de "Base de datos", cursada con el maestro: ING. LUIS ANTONIO GONZALEZ CASTRO 
+Integrantes del proyecto: Joshua André Alvarado Tovar, Ingridh Maricela Gracia Flores, Juan Antonio Manzano Ceja, Angel Guadalupe Rivera Portillo.
+El presente código forma parte de nuestro proyecto final, donde encontrará la estructura necesitada para el correcto funcionamiento de nuestro proyecto:*/
+
+/* Banner */
+.banner-principal {
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+
+.banner-contenido h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner-contenido p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.btn-banner {
+  background: #e94560;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-banner:hover {
+  background: #ff6b81;
+  transform: translateY(-2px);
+}
+
+/* Productos */
+.productos-destacados {
+  padding: 60px 20px;
+  background: #0f3460;
+  color: white;
+  text-align: center;
+}
+
+.productos-destacados h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #e94560;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.producto {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.producto p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.btn-comprar {
+  background: #e94560;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #ff6b81;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-contenido h1 {
+    font-size: 2rem;
+  }
+
+  .productos-destacados h2 {
+    font-size: 1.6rem;
+  }
+}

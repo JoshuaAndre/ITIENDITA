@@ -1,0 +1,219 @@
+[
+  {
+    "nombre": "Stardew Valley",
+    "categoria": "indie",
+    "base_gpu": 10,
+    "base_cpu": 22,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Hollow Knight",
+    "categoria": "indie",
+    "base_gpu": 14,
+    "base_cpu": 25,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Hades II",
+    "categoria": "indie",
+    "base_gpu": 18,
+    "base_cpu": 32,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Celeste",
+    "categoria": "indie",
+    "base_gpu": 10,
+    "base_cpu": 20,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Vampire Survivors",
+    "categoria": "indie",
+    "base_gpu": 8,
+    "base_cpu": 18,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Balatro",
+    "categoria": "indie",
+    "base_gpu": 8,
+    "base_cpu": 15,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Cuphead",
+    "categoria": "indie",
+    "base_gpu": 14,
+    "base_cpu": 24,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Dead Cells",
+    "categoria": "indie",
+    "base_gpu": 12,
+    "base_cpu": 22,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Hollow Knight: Silksong",
+    "categoria": "indie",
+    "base_gpu": 16,
+    "base_cpu": 28,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Terraria",
+    "categoria": "indie",
+    "base_gpu": 10,
+    "base_cpu": 20,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Valorant",
+    "categoria": "esports",
+    "base_gpu": 22,
+    "base_cpu": 60,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Counter-Strike 2",
+    "categoria": "esports",
+    "base_gpu": 30,
+    "base_cpu": 68,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "League of Legends",
+    "categoria": "esports",
+    "base_gpu": 18,
+    "base_cpu": 48,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Fortnite",
+    "categoria": "esports",
+    "base_gpu": 38,
+    "base_cpu": 62,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Apex Legends",
+    "categoria": "esports",
+    "base_gpu": 42,
+    "base_cpu": 64,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Rocket League",
+    "categoria": "esports",
+    "base_gpu": 20,
+    "base_cpu": 48,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Overwatch 2",
+    "categoria": "esports",
+    "base_gpu": 34,
+    "base_cpu": 60,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Dota 2",
+    "categoria": "esports",
+    "base_gpu": 24,
+    "base_cpu": 55,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "God of War Ragnarok",
+    "categoria": "aaa",
+    "base_gpu": 52,
+    "base_cpu": 56,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Marvel's Spider-Man 2",
+    "categoria": "aaa",
+    "base_gpu": 54,
+    "base_cpu": 58,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Elden Ring",
+    "categoria": "aaa",
+    "base_gpu": 48,
+    "base_cpu": 56,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Resident Evil 4 Remake",
+    "categoria": "aaa",
+    "base_gpu": 46,
+    "base_cpu": 50,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Hogwarts Legacy",
+    "categoria": "aaa",
+    "base_gpu": 56,
+    "base_cpu": 58,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Horizon Forbidden West",
+    "categoria": "aaa",
+    "base_gpu": 54,
+    "base_cpu": 56,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Final Fantasy XVI",
+    "categoria": "aaa",
+    "base_gpu": 55,
+    "base_cpu": 60,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Cyberpunk 2077 (RT)",
+    "categoria": "aaa_rt",
+    "base_gpu": 66,
+    "base_cpu": 60,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Alan Wake 2",
+    "categoria": "aaa_rt",
+    "base_gpu": 70,
+    "base_cpu": 58,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Black Myth: Wukong",
+    "categoria": "aaa_rt",
+    "base_gpu": 72,
+    "base_cpu": 60,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Starfield",
+    "categoria": "aaa_rt",
+    "base_gpu": 60,
+    "base_cpu": 64,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Microsoft Flight Simulator 2024",
+    "categoria": "aaa_rt",
+    "base_gpu": 64,
+    "base_cpu": 70,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  },
+  {
+    "nombre": "Star Wars Outlaws",
+    "categoria": "aaa_rt",
+    "base_gpu": 65,
+    "base_cpu": 60,
+    "imagen": "imagenesgamerxD/productos/images.jpg"
+  }
+]

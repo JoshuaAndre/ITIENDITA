@@ -1,0 +1,263 @@
+<!-- Universidad Politecnica de Victoria - ITIENDITA (Unidad 2)
+     Recomendador de PC builds - Interfaz (Cristian Gael Zuniga Uriegas) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recomendador de PC · ITIENDITA</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilosgamerxD/estilostemplate.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='imagenesgamerxD/Logo-navegador.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .reco-main{max-width:1100px;margin:2rem auto;padding:0 1rem;}
+    .reco-intro h1{margin-bottom:.3rem;}
+    .reco-intro p{color:#9aa;margin-top:0;}
+    .tabs{display:flex;gap:.5rem;margin:1.5rem 0 0;}
+    .tab-btn{flex:1;padding:.8rem;border:1px solid #2a2f3a;background:#161a22;color:#bcd;
+      border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:1rem;}
+    .tab-btn.activo{background:#1c1f26;color:#fff;border-bottom-color:#1c1f26;box-shadow:inset 0 -3px 0 #7c3aed;}
+    .panel{display:none;background:#1c1f26;border:1px solid #2a2f3a;border-radius:0 12px 12px 12px;padding:1.4rem 1.5rem;}
+    .panel.activo{display:block;}
+    .fila{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-end;}
+    .campo{display:flex;flex-direction:column;gap:.35rem;}
+    label{font-size:.85rem;color:#bcd;}
+    input,select{padding:.6rem .8rem;border-radius:8px;border:1px solid #384150;background:#11141a;color:#eef;min-width:180px;font-size:1rem;}
+    .btn{padding:.7rem 1.4rem;border:0;border-radius:8px;cursor:pointer;font-weight:600;background:#7c3aed;color:#fff;font-size:1rem;}
+    .btn:hover{background:#6d28d9;}
+    .grupo-juegos{margin-top:1.2rem;}
+    .grupo-juegos h4{margin:.6rem 0 .4rem;color:#8ab;font-size:.9rem;text-transform:uppercase;letter-spacing:.5px;}
+    .chips{display:flex;flex-wrap:wrap;gap:.5rem;}
+    .chip{display:flex;align-items:center;gap:.4rem;background:#11141a;border:1px solid #384150;border-radius:20px;padding:.4rem .8rem;cursor:pointer;font-size:.9rem;}
+    .chip input{min-width:auto;width:16px;height:16px;accent-color:#7c3aed;}
+    .chip:hover{border-color:#7c3aed;}
+    .reco-resumen{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0;}
+    .card{flex:1;min-width:170px;background:#1c1f26;border:1px solid #2a2f3a;border-radius:12px;padding:1rem 1.2rem;}
+    .card span{display:block;color:#9aa;font-size:.8rem;}
+    .card strong{font-size:1.35rem;}
+    .ok{color:#34d399;} .mal{color:#f87171;} .warn{color:#fbbf24;}
+    .lista{display:flex;flex-direction:column;gap:.7rem;margin-top:1rem;}
+    .item{display:flex;align-items:center;gap:1rem;background:#1c1f26;border:1px solid #2a2f3a;border-radius:10px;padding:.7rem 1rem;}
+    .item img{width:60px;height:60px;object-fit:contain;background:#fff;border-radius:8px;padding:4px;}
+    .item .cat{font-size:.72rem;color:#8ab;text-transform:uppercase;letter-spacing:.5px;}
+    .item .nom{font-weight:600;}
+    .item .precio{margin-left:auto;font-weight:700;white-space:nowrap;}
+    .item .add{margin-left:1rem;padding:.5rem .8rem;border:0;border-radius:8px;cursor:pointer;background:#059669;color:#fff;font-size:.85rem;}
+    .item .add:hover{background:#047857;}
+    .bloque{margin-top:1.5rem;background:#141821;border:1px solid #2a2f3a;border-radius:12px;padding:1rem 1.3rem;}
+    .bloque h3{margin-top:0;}
+    .bloque li{margin:.3rem 0;list-style:none;}
+    .bloque li i{margin-right:.5rem;}
+    .estado{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid #22262f;}
+    .badge{padding:.15rem .6rem;border-radius:12px;font-size:.8rem;font-weight:600;}
+    .badge.opt{background:#064e3b;color:#6ee7b7;} .badge.med{background:#4a3c09;color:#fcd34d;} .badge.bad{background:#4c1414;color:#fca5a5;}
+    .aviso{background:#3a2a08;border:1px solid #715210;color:#fcd34d;border-radius:8px;padding:.7rem 1rem;margin-top:1rem;}
+  </style>
+</head>
+<body>
+  <header class="cabecera-principal">
+    <div class="contenedor-cabecera">
+      <div class="logo">
+        <a href="{{ url_for('inicio') }}"><img src="{{ url_for('static', filename='imagenesgamerxD/Logo.png') }}" alt="Logo"></a>
+      </div>
+      <nav class="navegacion-principal">
+        <form class="barra-busqueda" role="search" action="{{ url_for('buscar') }}" method="GET">
+          <input type="search" name="q" placeholder="Buscar productos..." aria-label="Buscar">
+          <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        </form>
+        <ul class="menu-usuario">
+          <li><a href="{{ url_for('recomendador.recomendador') }}" class="active"><i class="fas fa-microchip"></i> Armar PC</a></li>
+          {% if session.usuario_logeado %}
+            <li><a href="{{ url_for('mi_cuenta') }}"><i class="fas fa-user"></i> Mi cuenta</a></li>
+            {% if session.rango != 'Admin' and session.rango != 'Repartidor' %}
+              <li><a href="{{ url_for('mi_carrito') }}"><i class="fas fa-shopping-cart"></i> Carrito (<span id="contador-carrito">{{ cart_count }}</span>)</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+          {% else %}
+            <li><a href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</a></li>
+            <li><a href="{{ url_for('registro') }}"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reco-main">
+    <div class="reco-intro">
+      <h1><i class="fas fa-microchip"></i> Recomendador de PC builds</h1>
+      <p>Arma una PC compatible por presupuesto y tipo de juego, o a partir de los juegos que quieres jugar.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn" data-tab="uso" type="button"><i class="fas fa-sliders-h"></i> Por uso</button>
+      <button class="tab-btn" data-tab="juegos" type="button"><i class="fas fa-gamepad"></i> Por juegos</button>
+    </div>
+
+    <!-- MODO 1: POR USO -->
+    <div class="panel" id="panel-uso">
+      <form method="POST" action="{{ url_for('recomendador.recomendador') }}">
+        <input type="hidden" name="modo" value="uso">
+        <div class="fila">
+          <div class="campo">
+            <label for="resolucion1">Resolución</label>
+            <select id="resolucion1" name="resolucion">
+              <option value="1080p">1080p (Full HD)</option>
+              <option value="1440p" selected>1440p (2K)</option>
+              <option value="4K">4K (Ultra HD)</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="exigencia">Tipo de juego</label>
+            <select id="exigencia" name="exigencia">
+              <option value="indie">Indies / juegos ligeros</option>
+              <option value="esports">Competitivos / eSports</option>
+              <option value="aaa" selected>AAA</option>
+              <option value="aaa_rt">AAA exigentes (Ray Tracing)</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="fps1">FPS objetivo</label>
+            <select id="fps1" name="fps">
+              <option value="60" selected>60 fps</option>
+              <option value="120">120 fps</option>
+              <option value="144">144 fps</option>
+              <option value="240">240 fps</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="presupuesto1">Presupuesto (opcional)</label>
+            <input type="number" id="presupuesto1" name="presupuesto" min="8000" step="500" placeholder="Ej. 30000">
+          </div>
+          <button class="btn" type="submit"><i class="fas fa-cogs"></i> Recomendar</button>
+        </div>
+        <p style="color:#8ab;font-size:.85rem;margin-top:1rem;">
+          Un indie en 4K no exige lo mismo que un AAA en 4K: la recomendación se ajusta al tipo de juego y a la resolución.
+        </p>
+      </form>
+    </div>
+
+    <!-- MODO 2: POR JUEGOS -->
+    <div class="panel" id="panel-juegos">
+      <form method="POST" action="{{ url_for('recomendador.recomendador') }}">
+        <input type="hidden" name="modo" value="juegos">
+        <div class="fila">
+          <div class="campo">
+            <label for="resolucion2">Resolución</label>
+            <select id="resolucion2" name="resolucion">
+              <option value="1080p">1080p (Full HD)</option>
+              <option value="1440p" selected>1440p (2K)</option>
+              <option value="4K">4K (Ultra HD)</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="fps2">FPS objetivo</label>
+            <select id="fps2" name="fps">
+              <option value="60" selected>60 fps</option>
+              <option value="120">120 fps</option>
+              <option value="144">144 fps</option>
+              <option value="240">240 fps</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="presupuesto2">Presupuesto (opcional)</label>
+            <input type="number" id="presupuesto2" name="presupuesto" min="8000" step="500" placeholder="Sin límite = lo mínimo">
+          </div>
+          <button class="btn" type="submit"><i class="fas fa-cogs"></i> Armar para estos juegos</button>
+        </div>
+        {% for etiqueta, items in grupos_juegos.items() %}
+          <div class="grupo-juegos">
+            <h4>{{ etiqueta }}</h4>
+            <div class="chips">
+              {% for j in items %}
+                <label class="chip"><input type="checkbox" name="juegos" value="{{ j._id }}"> {{ j.nombre }}</label>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </form>
+    </div>
+
+    {% if resultado %}
+      {% if resultado.error %}
+        <div class="aviso"><i class="fas fa-exclamation-triangle"></i> {{ resultado.error }}</div>
+      {% else %}
+        <section class="reco-resumen">
+          <div class="card"><span>Objetivo</span><strong style="font-size:1rem">{{ resultado.objetivo }}</strong></div>
+          <div class="card"><span>Precio total</span><strong>${{ "{:,.2f}".format(resultado.total) }}</strong></div>
+          <div class="card"><span>Presupuesto</span>
+            <strong class="{{ 'ok' if resultado.dentro_presupuesto else 'mal' }}">
+              {{ 'Sin límite' if resultado.sin_presupuesto else "${:,.2f}".format(resultado.presupuesto) }}
+            </strong>
+          </div>
+          <div class="card"><span>Consumo estimado</span><strong>{{ resultado.consumo_estimado }} W</strong></div>
+          <div class="card"><span>Compatibilidad</span>
+            <strong class="{{ 'ok' if resultado.compatible else 'mal' }}">{{ 'Compatible' if resultado.compatible else 'Con problemas' }}</strong>
+          </div>
+        </section>
+
+        {% for a in resultado.avisos %}
+          <div class="aviso"><i class="fas fa-info-circle"></i> {{ a }}</div>
+        {% endfor %}
+
+        <div class="lista">
+          {% for tipo in resultado.orden %}
+            {% set comp = resultado.build[tipo] %}
+            {% if comp %}
+              <div class="item">
+                <img src="{{ imagen_url(comp.imagen) }}" alt="{{ comp.nombre }}">
+                <div>
+                  <div class="cat">{{ resultado.etiquetas[tipo] }}</div>
+                  <div class="nom">{{ comp.nombre }}</div>
+                </div>
+                <div class="precio">${{ "{:,.2f}".format(comp.precio_actual) }}</div>
+                {% if session.usuario_logeado and session.rango not in ['Admin','Repartidor'] %}
+                  <form method="POST" action="{{ url_for('agregar_al_carrito', prod_id=comp._id) }}">
+                    <button class="add" type="submit"><i class="fas fa-cart-plus"></i> Agregar</button>
+                  </form>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if session.usuario_logeado and session.rango not in ['Admin','Repartidor'] and resultado.ids %}
+          <form method="POST" action="{{ url_for('recomendador.agregar_build') }}" style="margin-top:1rem;">
+            {% for id in resultado.ids %}<input type="hidden" name="ids" value="{{ id }}">{% endfor %}
+            <button class="btn" type="submit" style="background:#059669;">
+              <i class="fas fa-cart-plus"></i> Agregar todo el build al carrito
+            </button>
+          </form>
+        {% endif %}
+
+        {% if resultado.estados %}
+          <div class="bloque">
+            <h3>¿Cómo correrán tus juegos en {{ resultado.resolucion }}?</h3>
+            {% for nombre, texto, clase in resultado.estados %}
+              <div class="estado"><span>{{ nombre }}</span><span class="badge {{ clase }}">{{ texto }}</span></div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <div class="bloque">
+          <h3>Verificación de compatibilidad</h3>
+          <ul>
+            {% for c in resultado.checks %}<li class="ok"><i class="fas fa-check-circle"></i>{{ c }}</li>{% endfor %}
+            {% for p in resultado.problemas %}<li class="mal"><i class="fas fa-times-circle"></i>{{ p }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endif %}
+  </main>
+
+  <script>
+    const tabActiva = "{{ resultado.modo if resultado and not resultado.error else 'uso' }}";
+    function activar(tab){
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('activo', b.dataset.tab===tab));
+      document.getElementById('panel-uso').classList.toggle('activo', tab==='uso');
+      document.getElementById('panel-juegos').classList.toggle('activo', tab==='juegos');
+    }
+    document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>activar(b.dataset.tab)));
+    activar(tabActiva);
+  </script>
+</body>
+</html>

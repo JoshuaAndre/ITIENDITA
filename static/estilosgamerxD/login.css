@@ -1,0 +1,159 @@
+/*Universidad Politécnica de Victoria, Ciudad Victoria. Tamaulipas (18 de Abril de 2025)
+Ingeniería en Tecnologías de la información
+Proyecto final de la materia de "Base de datos", cursada con el maestro: ING. LUIS ANTONIO GONZALEZ CASTRO 
+Integrantes del proyecto: Joshua André Alvarado Tovar, Ingridh Maricela Gracia Flores, Juan Antonio Manzano Ceja, Angel Guadalupe Rivera Portillo.
+El presente código forma parte de nuestro proyecto final, donde encontrará la estructura necesitada para el correcto funcionamiento de nuestro proyecto:*/
+
+/* Estilos específicos para la página de login */
+
+.login-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1a1a2e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .login-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .login-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form label {
+    display: block;
+    color: #e94560;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #16213e;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .login-form input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .login-form input:focus {
+    border-color: #e94560;
+    outline: none;
+  }
+  
+  .login-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .login-btn {
+    background: #e94560;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  .login-btn:hover {
+    background: #ff6b81;
+    transform: translateY(-2px);
+  }
+  
+  .forgot-password {
+    color: #e94560;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .login-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #fff;
+  }
+  
+  .login-links a {
+    color: #e94560;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .login-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-login {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .social-login p {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+  }
+  
+  .facebook { background: #3b5998; }
+  .google { background: #db4437; }
+  .twitter { background: #1da1f2; }
+  
+  /* Estilos responsive */
+  @media (max-width: 600px) {
+    .login-container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .login-actions {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .login-btn {
+      width: 100%;
+    }
+    
+    .forgot-password {
+      align-self: flex-end;
+    }
+  }
