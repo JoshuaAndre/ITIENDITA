@@ -68,7 +68,9 @@ El presente código forma parte de nuestro proyecto final, donde encontrará la 
   </nav>
   <main class="contenedor-producto">
     <section class="producto2">
-      <img src="{{ imagen_url(producto.imagen) }}" alt="{{ producto.nombre }}">
+      <img src="{{ imagen_url(producto.imagen) }}?v={{ producto._id }}"
+           alt="{{ producto.nombre }}"
+           onerror="this.onerror=null; this.src='{{ url_for('static', filename='imagenesgamerxD/productos/default_producto.jpg') }}';">
     </section>
     
     <section class="informacion-producto">

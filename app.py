@@ -33,9 +33,25 @@ app.register_blueprint(chatbot_bp)  # Chatbot de hardware
 @app.context_processor
 def _utilidades_img():
     def imagen_url(path):
-        if path and (str(path).startswith("http://") or str(path).startswith("https://")):
+        if not path:
+            return url_for("static", filename="imagenesgamerxD/productos/default_producto.jpg")
+
+        path = str(path).strip()
+
+        if path.startswith("http://") or path.startswith("https://"):
             return path
+
+        if path.startswith("/static/"):
+            path = path.replace("/static/", "", 1)
+
+        if path.startswith("static/"):
+            path = path.replace("static/", "", 1)
+
+        if path.startswith("/"):
+            path = path[1:]
+
         return url_for("static", filename=path)
+
     return dict(imagen_url=imagen_url)
 
 @app.context_processor

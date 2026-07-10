@@ -139,7 +139,9 @@ El presente código forma parte de nuestro proyecto final, donde encontrará la 
                 <div class="producto-badge">-{{ producto.descuento }}%</div>
               {% endif %}
               <a href="{{ url_for('ver_producto', prod_id=producto._id) }}" class="enlace-detalle">
-                <img src="{{ imagen_url(producto.imagen) }}" alt="{{ producto.nombre }}">
+                <img src="{{ imagen_url(producto.imagen) }}?v={{ producto._id }}"
+                     alt="{{ producto.nombre }}"
+                     onerror="this.onerror=null; this.src='{{ url_for('static', filename='imagenesgamerxD/productos/default_producto.jpg') }}';">
                 <h3>{{ producto.nombre }}</h3>
               </a>           
               <div class="valoracion">
